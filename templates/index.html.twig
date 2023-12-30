@@ -1,0 +1,15 @@
+{# index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Jeu de rôle</h1>
+
+    {% if result %}
+        {% if result == 'Vous avez réussi !' %}
+            <p>Vous avez réussi avec un lancer de dé de {{ rollValue }} !</p>
+        {% else %}
+            <p>Vous avez échoué avec un lancer nul {{ rollValue }}.</p>
+        {% endif %}
+    {% endif %}
+{% endblock %}
